@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO（可编辑） -->
+    <title>Contact & Inquiry | HECOTH</title>
+    <meta
+      name="keywords"
+      content="agricultural tractor, farm machinery, construction machinery, smart drip irrigation system, machinery spare parts"
+    />
+    <meta name="description" content="Send inquiry to HECOTH. Form submits to email via free email forwarding service (no backend)." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { agri: { 600: '#2F855A', 700: '#276749' } } } } };
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+    <!-- 顶部导航 -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="h-16 flex items-center justify-between gap-4 rtl-flex-row-reverse">
+          <a href="index.html" class="flex items-center gap-3 rtl-flex-row-reverse">
+            <img src="assets/img/logo.jpg" alt="HECOTH Logo" class="h-9 w-9 rounded-lg object-cover border border-slate-200" />
+            <div class="leading-tight">
+              <div class="font-extrabold tracking-wide text-slate-900">HECOTH</div>
+              <div class="text-xs text-slate-500">Machinery Export</div>
+            </div>
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
+            <a class="hover:text-agri-700" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="hover:text-agri-700" href="categories.html" data-i18n="nav.categories">Products</a>
+            <a class="hover:text-agri-700" href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+            <a class="hover:text-agri-700" href="about.html" data-i18n="nav.about">About</a>
+            <a class="hover:text-agri-700" href="news.html" data-i18n="nav.news">News</a>
+            <a class="hover:text-agri-700" href="contact.html" data-i18n="nav.contact">Inquiry</a>
+          </nav>
+          <div class="flex items-center gap-3 rtl-flex-row-reverse">
+            <select id="langSelect" class="h-10 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-800"></select>
+            <button id="mobileMenuBtn" class="md:hidden h-10 w-10 rounded-xl border border-slate-200 bg-white text-slate-900" aria-label="Menu">☰</button>
+          </div>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm font-semibold text-slate-700">
+          <a class="py-2" href="index.html" data-i18n="nav.home">Home</a>
+          <a class="py-2" href="categories.html" data-i18n="nav.categories">Products</a>
+          <a class="py-2" href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+          <a class="py-2" href="about.html" data-i18n="nav.about">About</a>
+          <a class="py-2" href="news.html" data-i18n="nav.news">News</a>
+          <a class="py-2" href="contact.html" data-i18n="nav.contact">Inquiry</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div class="rtl-text-right">
+          <h1 class="text-3xl font-extrabold text-slate-900" data-i18n="contact.title">Contact & Inquiry</h1>
+          <p class="mt-2 text-slate-600" data-i18n="contact.sub">Tell us what you need. We usually reply within 12 hours.</p>
+
+          <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="font-bold text-slate-900">Direct Contact</div>
+            <div class="mt-3 text-sm text-slate-700 space-y-2">
+              <div>Email: <span class="font-semibold">zoe@annet.com</span></div>
+              <div>WhatsApp: <span class="font-semibold">+86 19743003775</span></div>
+              <div>Office: <span class="font-semibold">+86 13066010625</span></div>
+              <div>Address: Room 2213, Rongsheng Time Square, Jinan, Shandong, China</div>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6">
+            <div class="font-bold text-slate-900">What we can prepare for you</div>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600 leading-relaxed">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-agri-600"></span><span>Quotation (FOB/CIF) + lead time + MOQ</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-agri-600"></span><span>Photos/videos + packing details (carton/pallet/container)</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-agri-600"></span><span>Technical specs + spare parts list</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-agri-600"></span><span>OEM logo, label, manuals (by request)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ===================== Inquiry Form ===================== -->
+        <div id="form" class="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
+          <div id="sentBanner" class="hidden mb-6 rounded-2xl border border-agri-600/30 bg-agri-600/10 p-4 text-sm text-slate-800">
+            ✅ Message sent. We will reply shortly.
+          </div>
+
+          <div class="font-extrabold text-slate-900 text-xl">Inquiry Form</div>
+          <p class="mt-2 text-sm text-slate-600" data-i18n="common.formNotice">Submitting this form will send your inquiry directly to our email.</p>
+
+          <!-- =========================================================
+               询盘表单（可编辑）
+               免费邮件转发服务：FormSubmit（无需后端）
+               - 收件人：zoe@annet.com（按你的要求）
+               - 你可以改 action 里的邮箱
+               ========================================================= -->
+          <form class="mt-6 space-y-4" action="https://formsubmit.co/zoe@annet.com" method="POST">
+            <!-- 可编辑：邮件主题 -->
+            <input type="hidden" name="_subject" value="New Inquiry from HECOTH Website" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="contact.html?sent=1#form" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.name">Name</label>
+                <input name="name" required class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.email">Email</label>
+                <input name="email" type="email" required class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.phone">Phone/WhatsApp</label>
+                <input name="phone" class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.country">Country</label>
+                <input name="country" class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.product">Interested Products</label>
+                <input
+                  name="product"
+                  class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600"
+                  placeholder="e.g., TTS450 series, drip irrigation kit"
+                />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-slate-700" data-i18n="contact.qty">Estimated Quantity</label>
+                <input name="qty" class="mt-2 w-full h-11 rounded-xl border border-slate-200 px-4 focus:outline-none focus:ring-2 focus:ring-agri-600" placeholder="e.g., 1x40HQ / 50 sets" />
+              </div>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold text-slate-700" data-i18n="contact.message">Message / Requirements</label>
+              <textarea
+                name="message"
+                required
+                rows="6"
+                class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-agri-600"
+                placeholder="Tell us your target market, specs, engine standard, certificates, and delivery port."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="w-full h-12 rounded-xl bg-agri-600 text-white font-semibold hover:bg-agri-700 transition" data-i18n="contact.submit">
+              Send Inquiry
+            </button>
+          </form>
+
+          <div class="mt-4 text-xs text-slate-500 leading-relaxed">
+            说明：本表单通过第三方免费邮件转发服务发送到邮箱。若你希望改为 Formspree / Netlify Forms / Cloudflare Pages Forms，也可以保持纯前端。
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-slate-950 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-10">
+        <div class="text-sm text-white/70" data-i18n="common.footerLine">Your reliable machinery & supply chain partner in China.</div>
+        <div class="mt-3 text-xs text-white/60" data-i18n="common.copyright">© {year} HECOTH. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script>
+      // 发送成功提示（纯前端）
+      (function () {
+        const sent = new URLSearchParams(location.search).get("sent");
+        if (sent === "1") document.getElementById("sentBanner")?.classList.remove("hidden");
+      })();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,60 @@
+/* =========================================================
+   HECOTH B2B Static Site (Tailwind CDN)
+   可编辑：你可以在这里改「品牌主色 / 字体 / 小样式」
+   ========================================================= */
+
+:root{
+  --agri-green: #2F855A;  /* 农业生机绿 */
+  --agri-green-700:#276749;
+  --steel:#0F172A;        /* 工业深色 */
+  --steel-2:#111827;
+}
+
+/* 让滚动、字体更“稳重”一点 */
+html{ scroll-behavior:smooth; }
+body{ font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif; }
+
+/* 工业风轻网格背景（可删除） */
+.industrial-grid{
+  background-image:
+    linear-gradient(to right, rgba(15,23,42,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,23,42,.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* RTL 细节：某些模块需要强制对齐 */
+body.rtl .rtl-text-right{ text-align:right; }
+body.rtl .rtl-text-left{ text-align:left; }
+body.rtl .rtl-flex-row-reverse{ flex-direction: row-reverse; }
+body.rtl .rtl-justify-start{ justify-content:flex-start; }
+body.rtl .rtl-justify-end{ justify-content:flex-end; }
+
+/* 小胶囊标签 */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.25rem .6rem;
+  border-radius:9999px;
+  border:1px solid rgba(15,23,42,.15);
+  background:rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+}
+
+/* 产品参数表（结构固定，单元格可改） */
+.spec-table{
+  width:100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.spec-table th, .spec-table td{
+  border:1px solid rgba(15,23,42,.12);
+  padding:.6rem .75rem;
+  vertical-align: top;
+}
+.spec-table th{
+  width: 38%;
+  background: rgba(47,133,90,.08);
+  text-align:left;
+  font-weight:600;
+}

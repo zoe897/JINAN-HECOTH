@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO（可编辑） -->
+    <title>HECOTH Product Detail | Tractor / Farm Machinery</title>
+    <meta
+      name="keywords"
+      content="agricultural tractor, farm machinery, construction machinery, smart drip irrigation system, machinery spare parts"
+    />
+    <meta name="description" content="Product detail page: images, selling points and fixed-structure technical specification table." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { colors: { agri: { 600: '#2F855A', 700: '#276749' } } } } };
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+    <!-- 顶部导航（同首页） -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="h-16 flex items-center justify-between gap-4 rtl-flex-row-reverse">
+          <a href="index.html" class="flex items-center gap-3 rtl-flex-row-reverse">
+            <img src="assets/img/logo.jpg" alt="HECOTH Logo" class="h-9 w-9 rounded-lg object-cover border border-slate-200" />
+            <div class="leading-tight">
+              <div class="font-extrabold tracking-wide text-slate-900">HECOTH</div>
+              <div class="text-xs text-slate-500">Machinery Export</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
+            <a class="hover:text-agri-700" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="hover:text-agri-700" href="categories.html" data-i18n="nav.categories">Products</a>
+            <a class="hover:text-agri-700" href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+            <a class="hover:text-agri-700" href="about.html" data-i18n="nav.about">About</a>
+            <a class="hover:text-agri-700" href="news.html" data-i18n="nav.news">News</a>
+            <a class="hover:text-agri-700" href="contact.html" data-i18n="nav.contact">Inquiry</a>
+          </nav>
+
+          <div class="flex items-center gap-3 rtl-flex-row-reverse">
+            <select
+              id="langSelect"
+              class="h-10 rounded-xl border border-slate-200 bg-white px-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-agri-600"
+            ></select>
+            <button id="mobileMenuBtn" class="md:hidden h-10 w-10 rounded-xl border border-slate-200 bg-white text-slate-900" aria-label="Menu">☰</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm font-semibold text-slate-700">
+          <a class="py-2" href="index.html" data-i18n="nav.home">Home</a>
+          <a class="py-2" href="categories.html" data-i18n="nav.categories">Products</a>
+          <a class="py-2" href="solutions.html" data-i18n="nav.solutions">Solutions</a>
+          <a class="py-2" href="about.html" data-i18n="nav.about">About</a>
+          <a class="py-2" href="news.html" data-i18n="nav.news">News</a>
+          <a class="py-2" href="contact.html" data-i18n="nav.contact">Inquiry</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10">
+      <!-- 产品内容由 JS 根据 ?id=xxx 自动渲染 -->
+      <div id="productDetail"></div>
+    </main>
+
+    <footer class="bg-slate-950 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-10">
+        <div class="text-sm text-white/70" data-i18n="common.footerLine">Your reliable machinery & supply chain partner in China.</div>
+        <div class="mt-3 text-xs text-white/60" data-i18n="common.copyright">© {year} HECOTH. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
+
